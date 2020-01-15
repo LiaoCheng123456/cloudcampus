@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.rh</groupId>
+    <artifactId>cloudcampus</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cloudcampus-api</module>
+        <module>cloudcampus-gateway</module>
+        <module>cloudcampus-common</module>
+        <module>cloudcampus-user</module>
+        <module>cloudcampus-order</module>
+        <module>cloudcampus-take-out</module>
+        <module>cloudcampus-shopping</module>
+        <module>cloudcampus-errand</module>
+    </modules>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>1.8</java.version>
+        <latest.version>0.2.2.RELEASE</latest.version>
+        <openfeign.version>2.2.0.RELEASE</openfeign.version>
+        <hystrix.version>2.1.3.RELEASE</hystrix.version>
+        <fastjson.version>1.1.27</fastjson.version>
+        <gateway.version>2.2.1.RELEASE</gateway.version>
+        <mysql.version>5.1.40</mysql.version>
+        <springboot.latest.version>2.2.2.RELEASE</springboot.latest.version>
+        <log4j.version>1.2.17</log4j.version>
+        <mybatis.version>2.0.1</mybatis.version>
+        <druid.version>1.1.0</druid.version>
+        <aop.version>1.8.9</aop.version>
+        <redis.version>3.1.0</redis.version>
+        <redisson.version>3.11.6</redisson.version>
+        <springcloud.seata.version>2.0.0.RELEASE</springcloud.seata.version>
+        <seata.version>0.9.0</seata.version>
+    </properties>
+
+    <!--公共jar包-->
+    <dependencyManagement>
+        <dependencies>
+            <!--Spring Cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--Spring Boot Web-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.2.1.RELEASE</version>
+            </dependency>
+
+            <!--服务调用工具openfeign-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${openfeign.version}</version>
+            </dependency>
+
+            <!--nacos注册中心-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${latest.version}</version>
+            </dependency>
+
+            <!--nacos配置中心，如果不使用就不引入-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${latest.version}</version>
+            </dependency>
+
+            <!--gateway网关-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
+
+            <!--容断器hystrix-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>${hystrix.version}</version>
+            </dependency>
+
+            <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!--mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!--log4j-->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+
+            <!--Spring boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.latest.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- Json -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!--redisson-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!--redis-->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${redis.version}</version>
+            </dependency>
+
+            <!--aop-->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aop.version}</version>
+            </dependency>
+
+            <!--aop-->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aop.version}</version>
+            </dependency>
+
+            <!--springlcoud-alibaba-seata-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-seata</artifactId>
+                <version>${springcloud.seata.version}</version>
+            </dependency>
+
+            <!--seata core-->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-all</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
