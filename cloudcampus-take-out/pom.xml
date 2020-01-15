@@ -12,12 +12,26 @@
     <artifactId>cloudcampus-take-out</artifactId>
 
     <dependencies>
-
+        <!--spring boot-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${springboot.latest.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
 
         <!--api 引用-->
         <dependency>
             <groupId>com.rh</groupId>
             <artifactId>cloudcampus-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--api 引用-->
+        <dependency>
+            <groupId>com.rh</groupId>
+            <artifactId>cloudcampus-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
@@ -57,6 +71,11 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-
+        <!-- Json -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
     </dependencies>
 </project>
