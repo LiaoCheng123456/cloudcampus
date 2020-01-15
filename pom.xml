@@ -34,6 +34,7 @@
         <redisson.version>3.11.6</redisson.version>
         <springcloud.seata.version>2.0.0.RELEASE</springcloud.seata.version>
         <seata.version>0.9.0</seata.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     </properties>
 
     <!--公共jar包-->

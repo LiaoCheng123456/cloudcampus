@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8010
 
 spring:
   application:
@@ -10,22 +10,27 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
-#        - id: consumer
-#          uri: lb://consumer
-#          predicates:
-#            - Path=/mytest11/{segment}
-#          filters:
-#            - RewritePath=/consumer(?<segment>/?.*), $\{segment}
-#            - SetPath=/{segment}
-#        - id: provider222
-#          uri: lb://provider
-#          predicates:
-#            - Path=/proxxx/**
-#          filters:
-#            - RewritePath=/provider(?<segment>/?.*), $\{segment}
-        - id: setpath_route
-          uri: lb://provider
+        - id: order-path
+          uri: lb://cloudcampus-order
           predicates:
-            - Path=/mytest/{segment}
+            - Path=/order/{segment}
           filters:
             - SetPath=/{segment}
+        - id: shopping-path
+          uri: lb://cloudcampus-shopping
+          predicates:
+            - Path=/shopping/{segment}
+          filters:
+            - SetPath=/{segment}
+        - id: takout-path
+          uri: lb://cloudcampus-take-out
+          predicates:
+            - Path=/takeout/{segment}
+          filters:
+            - SetPath=/{segment}
+        - id: user-path
+          uri: lb://cloudcampus-user
+          predicates:
+            - Path=/user/{segment}
+          filters:
+            - SetPath=/test/{segment}
