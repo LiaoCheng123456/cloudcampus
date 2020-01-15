@@ -4,6 +4,7 @@ import com.rh.cloudcampus.dao.TestMapper;
 import com.rh.cloudcampus.dto.TestDTO;
 import com.rh.cloudcampus.enums.RspStatusEnum;
 import com.rh.cloudcampus.response.ObjectResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 import service.order.IOrderService;
 import service.shopping.IShoppingService;
@@ -11,6 +12,10 @@ import service.takeout.ITakeOutService;
 
 import javax.annotation.Resource;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 @Service
 public class TestService {
 
@@ -26,7 +31,8 @@ public class TestService {
     @Resource
     private ITakeOutService takeOutService;
 
-    public ObjectResponse<TestDTO> insertTestValue(TestDTO testDto) {
+    @GlobalTransactional(timeoutMills = 300000, name = "user-gts-seata-example")
+    public ObjectResponse<TestDTO> insertTestValue(TestDTO testDto) throws Exception {
 
         // 修改超市数据，减少库存等等
         TestDTO shopping = new TestDTO();
@@ -39,6 +45,10 @@ public class TestService {
         takeout.setId(2l);
         takeout.setTest("takeout");
         ObjectResponse<TestDTO> takeoutResult = orderService.insertTest(takeout);
+
+        if (true) {
+            throw new Exception();
+        }
 
         // 创建订单
         TestDTO order = new TestDTO();

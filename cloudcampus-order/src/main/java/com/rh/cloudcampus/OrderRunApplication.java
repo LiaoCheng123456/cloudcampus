@@ -7,6 +7,10 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableCircuitBreaker

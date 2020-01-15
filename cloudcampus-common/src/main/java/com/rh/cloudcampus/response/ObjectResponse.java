@@ -4,6 +4,10 @@ import com.rh.cloudcampus.enums.RspStatusEnum;
 
 import java.io.Serializable;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 public class ObjectResponse<T> extends BaseResponse implements Serializable {
 
     private T data;

@@ -7,6 +7,10 @@ import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 import service.shopping.IShoppingService;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 @Component
 public class TakeOutClientFallBackFactory implements FallbackFactory<ITakeOutService> {
     public ITakeOutService create(Throwable throwable) {

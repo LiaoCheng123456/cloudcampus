@@ -6,6 +6,10 @@ import com.rh.cloudcampus.response.ObjectResponse;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 @Component
 public class OrderClientFallBackFactory implements FallbackFactory<IOrderService> {
     public IOrderService create(Throwable throwable) {

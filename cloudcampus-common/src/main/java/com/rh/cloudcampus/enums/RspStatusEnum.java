@@ -1,6 +1,9 @@
 package com.rh.cloudcampus.enums;
 
-
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 public enum RspStatusEnum {
     /**
      * SUCCESS

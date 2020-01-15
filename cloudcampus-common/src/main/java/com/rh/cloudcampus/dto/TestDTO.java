@@ -1,5 +1,9 @@
 package com.rh.cloudcampus.dto;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 public class TestDTO {
 
     private Long id;

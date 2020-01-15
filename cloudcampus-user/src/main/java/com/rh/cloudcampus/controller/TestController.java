@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 @RestController
 @RequestMapping("test")
 public class TestController {
@@ -18,7 +22,7 @@ public class TestController {
     private TestService testService;
 
     @PostMapping("/insert")
-    public ObjectResponse<TestDTO> insertTest(@RequestBody TestDTO testDTO) {
+    public ObjectResponse<TestDTO> insertTest(@RequestBody TestDTO testDTO) throws Exception {
         return testService.insertTestValue(testDTO);
     }
 }

@@ -2,6 +2,10 @@ package com.rh.cloudcampus.response;
 
 import java.io.Serializable;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 public class BaseResponse implements Serializable {
 
     private int status = 200;

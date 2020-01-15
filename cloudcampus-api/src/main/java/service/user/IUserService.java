@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import service.takeout.TakeOutClientFallBackFactory;
 
+/**
+ * @author liaocheng
+ * @date 2020-1-15 17:20
+ */
 @FeignClient(value = "cloudcampus-user",fallbackFactory = UserClientFallBackFactory.class)
 public interface IUserService {
 
