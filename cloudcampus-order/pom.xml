@@ -12,13 +12,10 @@
     <artifactId>cloudcampus-order</artifactId>
 
     <dependencies>
-        <!--spring boot-->
+        <!-- log4j2  依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-dependencies</artifactId>
-            <version>${springboot.latest.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
         <!--api 引用-->
