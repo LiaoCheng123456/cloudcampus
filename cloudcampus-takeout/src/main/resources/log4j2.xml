@@ -3,7 +3,7 @@
 
 	<!-- 定义下面的引用名 -->
 	<Properties>
-		<property name="projectName">cloudcampus-take-out</property>
+		<property name="projectName">cloudcampus-takeout</property>
 		<property name="logPattern">[${projectName}] %d{yyyy-MM-dd HH:mm:ss} -%-4r [%t] %-5p  %x - %m%n</property> 
 		<property name="basePath">/mnt/java/logs/${projectName}</property>
 	</Properties>

@@ -13,7 +13,7 @@
         <module>cloudcampus-common</module>
         <module>cloudcampus-user</module>
         <module>cloudcampus-order</module>
-        <module>cloudcampus-take-out</module>
+        <module>cloudcampus-takeout</module>
         <module>cloudcampus-shopping</module>
         <module>cloudcampus-errand</module>
     </modules>
