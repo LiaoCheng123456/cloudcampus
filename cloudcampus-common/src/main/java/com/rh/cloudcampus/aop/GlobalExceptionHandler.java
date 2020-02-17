@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ObjectResponse exceptionHandler(Exception e){
-
+        e.printStackTrace();
         ObjectResponse objectResponse = new ObjectResponse<>();
         objectResponse.setStatus(RspStatusEnum.FAIL.getCode());
         objectResponse.setMessage(RspStatusEnum.FAIL.getMessage());

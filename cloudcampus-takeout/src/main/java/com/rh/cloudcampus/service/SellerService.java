@@ -4,6 +4,7 @@ import com.rh.cloudcampus.dao.SellerMapper;
 import com.rh.cloudcampus.dto.TSeller;
 import com.rh.cloudcampus.enums.ParamCheckEnum;
 import com.rh.cloudcampus.enums.RspStatusEnum;
+import com.rh.cloudcampus.enums.SellerStatusEnum;
 import com.rh.cloudcampus.exception.DefaultException;
 import com.rh.cloudcampus.exception.ParamException;
 import com.rh.cloudcampus.response.ObjectResponse;
@@ -41,6 +42,18 @@ public class SellerService {
 
         // 密码加密
         seller.setPassword(CommonUtils.md5(seller.getPassword()));
+
+        // 生成id
+        seller.setId(CommonUtils.getId());
+
+        // 创建时间
+        seller.setCreateTime(CommonUtils.getTimeStamp());
+
+        // 更新时间
+        seller.setUpdateTime(CommonUtils.getTimeStamp());
+
+        // 状态
+        seller.setStatus(SellerStatusEnum.SHOP_CLOSE.getCode());
 
         // 添加到数据库
         boolean b = sellerMapper.addSeller(seller);

@@ -16,7 +16,7 @@ public class TSeller implements Serializable,Cloneable{
     /** 密码;密码 */
     private String password ;
     /** 状态;1=店铺关闭，2=店铺开启，3=删除 */
-    private String status ;
+    private Integer status ;
     /** 创建时间;创建时间 */
     private Long createTime ;
     /** 更新时间;店铺信息更新时间 */
@@ -73,11 +73,11 @@ public class TSeller implements Serializable,Cloneable{
         this.password = password;
     }
     /** 状态;1=店铺关闭，2=店铺开启，3=删除 */
-    public String getStatus(){
+    public Integer getStatus(){
         return this.status;
     }
     /** 状态;1=店铺关闭，2=店铺开启，3=删除 */
-    public void setStatus(String status){
+    public void setStatus(Integer status){
         this.status = status;
     }
     /** 创建时间;创建时间 */

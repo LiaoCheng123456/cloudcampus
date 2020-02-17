@@ -18,9 +18,9 @@ public enum ParamCheckEnum {
     LENGTH_FAILED(10002, "参数长度不够"),
 
     /**
-     * 用户名错误
+     * 用户名格式错误
      */
-    USERNAME_FAILED(10003, "用户名错误"),
+    USERNAME_LENGTH_FAILED(10003, "用户名格式错误"),
 
     /**
      * 密码错误

@@ -44,6 +44,11 @@ public class SellerServiceHelper {
         // @TODO
         // 验证校区是否存在
 
+        // 检查用户名长度
+        if (!seller.getUsername().matches(Validation.USERNAME)) {
+            throw new ParamException(ParamCheckEnum.USERNAME_LENGTH_FAILED);
+        }
+
         // 验证密码是否为弱口令
         if (!seller.getPassword().matches(Validation.PASSWORD)) {
             throw new ParamException(ParamCheckEnum.WEAK_PASSWORD);
@@ -54,6 +59,8 @@ public class SellerServiceHelper {
     public boolean checkSellerUsernameExists(String username) {
         TSeller seller = new TSeller();
         seller.setUsername(username);
-        return sellerMapper.getSeller(seller) == null;
+        TSeller sellerResult = sellerMapper.getSeller(seller);
+        if (sellerResult == null) return true;
+        return false;
     }
 }
