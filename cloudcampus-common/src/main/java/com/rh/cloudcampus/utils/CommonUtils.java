@@ -35,18 +35,12 @@ public class CommonUtils {
     private static final Long NOWTIME = System.currentTimeMillis();
 
     /**
-     * 时间对象
-     */
-    private static SimpleDateFormat simpleDateFormat;
-
-
-    /**
      * 获取格式化过后的当前时间
      *
      * @return 2020-02-17 11:44:31
      */
     public static String getNowFormatTime() {
-        simpleDateFormat = new SimpleDateFormat(YMDHMS);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(YMDHMS);
         return simpleDateFormat.format(NOWTIME);
     }
 
