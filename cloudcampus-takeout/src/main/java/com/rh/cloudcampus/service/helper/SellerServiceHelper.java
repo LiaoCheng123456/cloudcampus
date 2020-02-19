@@ -2,9 +2,9 @@ package com.rh.cloudcampus.service.helper;
 
 import com.rh.cloudcampus.dao.SellerMapper;
 import com.rh.cloudcampus.dto.TSeller;
-import com.rh.cloudcampus.enums.ParamCheckEnum;
 import com.rh.cloudcampus.exception.ParamException;
 import com.rh.cloudcampus.utils.Validation;
+import com.rh.cloudcampus.enums.ParamCheckEnum;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 

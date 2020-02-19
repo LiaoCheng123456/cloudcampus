@@ -5,7 +5,6 @@ import com.rh.cloudcampus.enums.RspStatusEnum;
 import com.rh.cloudcampus.response.ObjectResponse;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
-import service.shopping.IShoppingService;
 
 /**
  * @author liaocheng

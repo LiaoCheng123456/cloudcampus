@@ -28,10 +28,10 @@ spring:
             - Path=/takeout/{segment}
           filters:
             - SetPath=/{segment}
-        - id: user-path
-          uri: lb://cloudcampus-user
+        - id: edu-path
+          uri: lb://cloudcampus-edu
           predicates:
-            - Path=/user/{segment}
+            - Path=/edu/{segment}
           filters:
             - SetPath=/test/{segment}
 

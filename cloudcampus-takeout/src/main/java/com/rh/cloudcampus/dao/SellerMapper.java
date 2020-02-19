@@ -1,7 +1,6 @@
 package com.rh.cloudcampus.dao;
 
 import com.rh.cloudcampus.dto.TSeller;
-import com.rh.cloudcampus.dto.TestDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

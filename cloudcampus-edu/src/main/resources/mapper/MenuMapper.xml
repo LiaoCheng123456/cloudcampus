@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rh.cloudcampus.edu.dao.auth.MenuDao">
+
+    <insert id="addMenu" parameterType="com.rh.cloudcampus.edu.Entity.Menu">
+      insert into t_campus_menu (id,`name`,name_en,url,parentId,
+      addBy,addTime,updateBy,updateTime,isDel)
+      values (#{id}, #{name}, #{name_en}, #{url}, #{parentId},
+      #{addBy}, #{addTime}, #{updateBy}, #{updateTime}, #{isDel})
+    </insert>
+</mapper>

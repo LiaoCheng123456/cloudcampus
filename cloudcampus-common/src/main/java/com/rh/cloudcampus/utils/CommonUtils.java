@@ -1,7 +1,5 @@
 package com.rh.cloudcampus.utils;
 
-import com.rh.cloudcampus.dto.TSeller;
-
 import java.net.InetAddress;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;

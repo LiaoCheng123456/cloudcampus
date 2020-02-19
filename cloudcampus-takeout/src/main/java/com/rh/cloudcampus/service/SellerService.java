@@ -3,10 +3,10 @@ package com.rh.cloudcampus.service;
 import com.rh.cloudcampus.dao.SellerMapper;
 import com.rh.cloudcampus.dto.TSeller;
 import com.rh.cloudcampus.enums.RspStatusEnum;
-import com.rh.cloudcampus.enums.SellerStatusEnum;
 import com.rh.cloudcampus.response.ObjectResponse;
 import com.rh.cloudcampus.service.helper.SellerServiceHelper;
 import com.rh.cloudcampus.utils.CommonUtils;
+import com.rh.cloudcampus.enums.SellerStatusEnum;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

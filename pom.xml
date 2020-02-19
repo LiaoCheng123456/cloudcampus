@@ -11,7 +11,7 @@
         <module>cloudcampus-api</module>
         <module>cloudcampus-gateway</module>
         <module>cloudcampus-common</module>
-        <module>cloudcampus-user</module>
+        <module>cloudcampus-edu</module>
         <module>cloudcampus-order</module>
         <module>cloudcampus-takeout</module>
         <module>cloudcampus-shopping</module>
