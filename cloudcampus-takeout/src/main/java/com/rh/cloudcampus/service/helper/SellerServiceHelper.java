@@ -56,11 +56,15 @@ public class SellerServiceHelper {
 
     }
 
-    public boolean checkSellerUsernameExists(String username) {
+    /**
+     * 检查用户名是否存在
+     * @param username username
+     * @return true or false
+     */
+    private boolean checkSellerUsernameExists(String username) {
         TSeller seller = new TSeller();
         seller.setUsername(username);
         TSeller sellerResult = sellerMapper.getSeller(seller);
-        if (sellerResult == null) return true;
-        return false;
+        return sellerResult == null;
     }
 }
