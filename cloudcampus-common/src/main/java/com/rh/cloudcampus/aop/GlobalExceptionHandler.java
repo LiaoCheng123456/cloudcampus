@@ -48,8 +48,8 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * 参数异常
-     * @param e
+     * 自定义参数异常
+     * @param e ParamException
      * @return
      */
     @ExceptionHandler(ParamException.class)
